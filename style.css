@@ -1,0 +1,83 @@
+:root{
+  --primary-color : rgb(131, 59, 248);
+  --secondary-color : rgb(255, 35, 104);
+
+  --font-color: rgb(46, 46, 46);
+  --font-small: 1.2rem;
+  --font-medium: 1.6rem;
+  --font-large : 2rem;
+  
+  --max-width : 1024px;
+}
+
+body{
+  margin: 0; padding: 0;
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+h3{
+  font-size: var(--font-small);
+  color: var(--font-color);
+}
+
+.main{
+  width: 95%;
+  background: aliceblue;
+  height: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .main{
+    width: var(--max-width);
+  }
+}
+
+.container{
+  padding: 1rem;
+ 
+}
+
+.title{
+  text-align: center;
+  color: var(--font-color);
+  font-size: var(--font-medium);
+}
+
+@media screen and (min-width: 768px) {
+  .title{
+    font-size: var(--font-large);
+  }
+}
+
+.select{
+  display: block;
+  width: 90%;
+  background: aliceblue;
+  font-size: var(--font-small);
+  padding: .1rem .5rem;
+}
+
+.input{
+  display: block;
+  
+}
+
+.btn{
+  display: block;
+  margin-top: 1rem;
+  background: var(--primary-color);
+  font-size: 1.1em;
+  padding: .5em 1em;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+}
+
+.error {
+  color: brown;
+}
