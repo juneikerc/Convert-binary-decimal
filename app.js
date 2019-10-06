@@ -3,12 +3,12 @@ document.getElementById('btn').addEventListener('click', e => {
     input = document.getElementById('input')
  
   if(select.value === 'binaryToDecimal') {
-    if(Number(input.value)) {
+    if(validateBinary(input.value) ) {
       const numberConvert = binaryToDecimal(input.value)
       printResult(numberConvert)
       
     }else{
-      printError('Por favor introduce un numero')
+      printError('Por favor introduce un numero binario')
     }
     
   }
@@ -17,7 +17,7 @@ document.getElementById('btn').addEventListener('click', e => {
       const numberConvert = decimalToBinary(input.value)
       printResult(numberConvert)
     }else{
-      printError('Por favor introduce un numero')
+      printError('Por favor introduce un numero decimal valido')
     }
   }
 
@@ -94,6 +94,9 @@ const printError = err => {
   
 }
 
-let regex = /^[0-1]{1,}$/
-let valor = '101000011100'
-console.log(regex.test(valor))
+const validateBinary = number => {
+  let regex = /^[0-1]{1,}$/
+
+  return regex.test(number)
+}
+
