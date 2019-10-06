@@ -75,7 +75,7 @@ const printResult = number => {
 
   setTimeout(() => {
     document.querySelector('.result').remove()
-  }, 5000);
+  }, 15000);
 
 } 
 
